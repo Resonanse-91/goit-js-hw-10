@@ -58,7 +58,8 @@ breedSelect.addEventListener('change', () => {
   const selectedBreedId = breedSelect.value;
 
   loader.style.display = 'block';
-
+  catInfo.innerHTML = '';
+  
   fetchCatByBreed(selectedBreedId)
     .then(catData => {
       displayCatInfo(catData);
